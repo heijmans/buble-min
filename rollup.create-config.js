@@ -28,7 +28,6 @@ const createConfig = (opts) => {
 					'src/**',
 					// For unpkg build
 					'node_modules/acorn-jsx/**',
-					'node_modules/regexpu-core/**',
 					'node_modules/unicode-match-property-ecmascript/**',
 					'node_modules/unicode-match-property-value-ecmascript/**',
 				],

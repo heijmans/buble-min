@@ -1,7 +1,7 @@
 {
-  "name": "buble",
+  "name": "buble-min",
   "version": "0.19.8",
-  "description": "The blazing fast, batteries-included ES2015 compiler",
+  "description": "The blazing fast, batteries-included ES2015 compiler (minimal version)",
   "main": "dist/buble.cjs.js",
   "module": "dist/buble.es.js",
   "browser": {
@@ -34,7 +34,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bublejs/buble.git"
+    "url": "git+https://github.com/heijmans/buble-min.git"
   },
   "keywords": [
     "javascript",
@@ -46,12 +46,12 @@
     "es6",
     "es7"
   ],
-  "author": "Rich Harris",
+  "author": "Rich Harris (and a few changes by Jan Heijmans)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bublejs/buble/issues"
+    "url": "https://github.com/heijmans/buble-min/issues"
   },
-  "homepage": "https://github.com/bublejs/buble#README",
+  "homepage": "https://github.com/heijmans/buble-min#README",
   "devDependencies": {
     "console-group": "^0.3.3",
     "eslint": "^4.19.1",
@@ -75,7 +75,6 @@
     "acorn-jsx": "^5.0.1",
     "chalk": "^2.4.2",
     "magic-string": "^0.25.3",
-    "minimist": "^1.2.0",
-    "regexpu-core": "^4.5.4"
+    "minimist": "^1.2.0"
   }
 }

@@ -55,11 +55,6 @@ exports.file_list = [
 		"language/*bigint*",
 	]},
 
-	// These have an u flag, so regexpucore throws
-	{ level: 3, desc: "regexpNamedGroups", files: [
-		"built-ins/RegExp/named-groups/(groups-p*.js|l*|unicode-(p*|r*))",
-	]},
-
 	// These don't have an u flag, so regexpucore is not executed on them
 	{ level: 2, desc: "regexpNamedGroups", files: [
 		"annexB/built-ins/RegExp/named-groups/non-unicode-malformed.js",
@@ -73,22 +68,6 @@ exports.file_list = [
 
 	{ level: 3, desc: "regjsparserBug", files: [
 		"built-ins/RegExp/named-groups/unicode-property-names.js",
-	]},
-
-	{ level: 1, desc: "regexpucoreBug", files: [
-		"built-ins/RegExp/property-escapes/generated/Case_Ignorable.js",
-		"built-ins/RegExp/property-escapes/generated/Changes_When_NFKC_Casefolded.js",
-		"built-ins/RegExp/property-escapes/generated/Changes_When_Titlecased.js",
-		"built-ins/RegExp/property-escapes/generated/Changes_When_Uppercased.js",
-		"built-ins/RegExp/property-escapes/generated/General_Category_-_Decimal_Number.js",
-		"built-ins/RegExp/property-escapes/generated/General_Category_-_Lowercase_Letter.js",
-		"built-ins/RegExp/property-escapes/generated/General_Category_-_Number.js",
-		"built-ins/RegExp/property-escapes/generated/General_Category_-_Other.js",
-		"built-ins/RegExp/property-escapes/generated/General_Category_-_Unassigned.js",
-		"built-ins/RegExp/property-escapes/generated/Grapheme_Base.js",
-		"built-ins/RegExp/property-escapes/generated/ID_Continue.js",
-		"built-ins/RegExp/property-escapes/generated/Lowercase.js",
-		"built-ins/RegExp/property-escapes/generated/XID_Continue.js",
 	]},
 
 	// buble bug: Since we parse with module source type, this does not parse
@@ -1037,10 +1016,6 @@ exports.skip_list = [
 	] },
 	{ desc: "Symbol.hasInstance", files: [ "built-ins/Function/prototype/Symbol.hasInstance/this-val-poisoned-prototype.js" ] },
 	{ desc: "Array.prototype.includes", files: [ "built-ins/Function/prototype/toString/built-in-function-object.js" ] },
-	{ desc: "regexpucoreIssue?", files: [
-		// This produces an S1 on Node < 8, but passes on Node >= 8
-		"built-ins/RegExp/property-escapes/generated/Assigned.js",
-	] },
 
 	{ desc: "nodeBug_asyncEscapedLineTerminator", files: [ "language/expressions/async-arrow-function/escaped-async-line-terminator.js" ] },
 	{ desc: "nodeBug_keyOrder", files: [ "built-ins/Reflect/ownKeys/return-on-corresponding-order-large-index.js" ] },
